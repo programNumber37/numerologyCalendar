@@ -1,22 +1,27 @@
 #calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr); /* 7 columns (Sun-Sat) */
-    gap: 4px;
-  }
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Sunday to Saturday */
+}
   
   .calendar-day {
     padding: 10px;
     text-align: center;
     border: 1px solid #ddd;
+    border-radius: 5%;
+    margin: 5px;
     cursor: pointer;
   }
   
   .calendar-day.current {
     background: #fff;
   }
+
+  .calendar-day.currentDay {
+    background:red;
+  }
   
-  .calendar-day.other {
-    background: #f5f5f5;
+  .calendar-day.previous {
+    background-color: lightgray;
     color: #999;
     cursor: default;
   }
